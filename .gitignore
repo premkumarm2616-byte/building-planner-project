@@ -1,0 +1,11 @@
+node_modules/
+server/node_modules/
+dist/
+# local database files (do NOT commit real data)
+server/local.db
+server/local.db-*
+server/data.db
+server/data.db-*
+*.log
+.env
+.DS_Store

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+/* Dimension-line annotation, used to echo architectural drawing marks
+   around plot dimensions and floor plan measurements */
+.dim-line {
+  position: relative;
+}
+.dim-line::before,
+.dim-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid currentColor;
+  border-left: 1.5px solid currentColor;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.dim-line::before {
+  left: -2px;
+}
+.dim-line::after {
+  right: -2px;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.card {
+  @apply bg-white border border-blueprint-900/10 rounded-xl shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-amber-500 hover:bg-amber-600 text-blueprint-950 font-semibold px-5 py-2.5 rounded-lg transition-colors;
+}
+
+.btn-outline {
+  @apply border border-blueprint-700 text-blueprint-700 hover:bg-blueprint-700 hover:text-white font-medium px-5 py-2.5 rounded-lg transition-colors;
+}
+
+.input-field {
+  @apply w-full border border-blueprint-900/20 rounded-lg px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-blueprint-600 focus:border-transparent text-sm;
+}
+
+.label {
+  @apply block text-xs font-semibold uppercase tracking-wide text-blueprint-900/60 mb-1.5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b4d8955;
+  border-radius: 8px;
+}
