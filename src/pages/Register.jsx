@@ -68,7 +68,7 @@ export default function Register() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="label">Full Name</label>
-              <input type="text" name="name" required className="input-field" placeholder="Premkumar S"
+              <input type="text" name="name" required className="input-field" placeholder="Enter Your Full Name"
                 value={form.name} onChange={handleChange} />
             </div>
             <div>
